@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+<section>
+	<!-- Start Slider -->
+
+	<div id="carouselExample" class="carousel slide mt-auto h-100">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img
+						src="img/slidebar01.jpg"
+						class="d-block w-100 rounded"
+						alt="Home Image"
+						style="object-fit: cover; height: 660px;" >
+				/>
+			</div>
+			<div class="carousel-item">
+				<img
+						src="img/slidar02.jpg"
+						class="d-block w-100 rounded"
+						alt="Ecom Image 3"
+						style="object-fit: cover; height: 660px;">
+				/>
+			</div>
+			<div class="carousel-item">
+				<img
+						src="img/slidebar03.jpg"
+						class="d-block w-100 rounded"
+						alt="Ecom Image 2"
+						style="object-fit: cover; height: 660px;">
+				/>
+			</div>
+		</div>
+		<button
+				class="carousel-control-prev"
+				type="button"
+				data-bs-target="#carouselExample"
+				data-bs-slide="prev"
+		>
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button
+				class="carousel-control-next"
+				type="button"
+				data-bs-target="#carouselExample"
+				data-bs-slide="next"
+		>
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+
+	<!-- End Slider -->
+
+
+
+	<!-- Start Category Module -->
+	<div class="container">
+		<div class="row">
+			<p class="text-center fs-4 category-text">SUBJECTS</p>
+			<div class="col-md-2" th:each="c:${category}">
+				<div class="card category-card02 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+					<div class="card-body text-center d-flex justify-content-center align-items-center">
+						<!-- Link centered inside the box -->
+						<a th:href="@{'/products?category='+${c.name}}" class="text-decoration-none text-dark fs-5 fw-bold">
+							[[${c.name}]]
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Category Module -->
+
+
+
+
+
+	<!-- Start Latest Product Module -->
+
+	<div class="container-fluid bg-light p-3">
+		<div class="row">
+			<p class="text-center fs-4">Meet Our Best Teachers</p>
+
+			<div class="col-md-3" th:each="p:${products}">
+				<div class="card01 shadow-sm mb-5 bg-body-tertiary rounded hover-effect">
+					<div class="card01-img-container">
+						<!-- Ensure the image fits inside the card -->
+						<img alt="" th:src="@{'img/product_img/'+${p.image}}" class="card01-img" />
+					</div>
+					<div class="card01-body text-center">
+						<p><a th:href="@{'/product/'+${p.id}}" class="text-decoration-none text-dark fw-bold">[[${p.title}]]</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Header2 Section -->
+	<div class="header02-section mt-4">
+		<p class="header02-text">
+			When you choose VISI-LORS Tutor Platform, you can be confident for investing in the most reliable tutoring services available in your area
+		</p>
+		<button class="know-more-btn">Know More...</button>
+	</div>
+
+	<!-- Statistics Section -->
+	<div class="statistics-section">
+		<div class="stat-card">
+			<img src="img/teachericon.png" alt="Teacher Icon" class="stat-icon">
+			<p class="stat-value">3000+</p>
+			<p class="stat-label">TEACHERS</p>
+		</div>
+		<div class="stat-card">
+			<img src="img/stdenticon.png" alt="Student Icon" class="stat-icon">
+			<p class="stat-value">5500+</p>
+			<p class="stat-label">STUDENTS</p>
+		</div>
+		<div class="stat-card">
+			<img src="img/demoicon.png" alt="Demo Classes Icon" class="stat-icon">
+			<p class="stat-value">2100+</p>
+			<p class="stat-label">DEMO CLASSES</p>
+		</div>
+		<div class="stat-card">
+			<img src="img/addmisonicon.png" alt="Admission Icon" class="stat-icon">
+			<p class="stat-value">5000+</p>
+			<p class="stat-label">ADMISSIONS</p>
+		</div>
+		<div class="stat-card">
+			<img src="img/leadsicon.png" alt="Leads Icon" class="stat-icon">
+			<p class="stat-value">700+</p>
+			<p class="stat-label">LEADS</p>
+		</div>
+	</div>
+
+	<div class="map-section">
+		<p class="text-center fs-4 mt-4">Our Location</p>
+		<img src="/img/map.png" alt="Map" class="img-fluid map-image">
+	</div>
+
+	<!-- Start Footer -->
+	<footer class="footer bg-dark text-light mt-4">
+		<div class="container">
+			<div class="row">
+				<!-- Company Section -->
+				<div class="col-md-4">
+					<h5 class="footer-heading">COMPANY</h5>
+					<ul class="footer-links">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Refund & Cancellation</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">FAQ's</a></li>
+						<li><a href="#">Site Map</a></li>
+						<li><a href="#">Links</a></li>
+					</ul>
+				</div>
+
+				<!-- Area of Work Section -->
+				<div class="col-md-4">
+					<h5 class="footer-heading">AREA OF WORK</h5>
+					<ul class="footer-links">
+						<li><a href="#">Private Tuitions</a></li>
+						<li><a href="#">Online Tuitions</a></li>
+						<li><a href="#">Teaching Jobs</a></li>
+						<li><a href="#">Top Profile</a></li>
+						<li><a href="#">Teachers Reviews</a></li>
+					</ul>
+				</div>
+
+
+
+				<!-- Get in Touch Section -->
+				<div class="col-md-4">
+					<h5 class="footer-heading">GET IN TOUCH</h5>
+					<p>Address: Sector 4, Noida - 201301<br>Uttar Pradesh</p>
+
+					<p>Email: <a href="mailto:support@perfecttutor.in">saxenavinayak5@gmail.com</a></p>
+					<div class="social-icons">
+						<a href="#"><i class="fab fa-facebook"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-linkedin"></i></a>
+						<a href="#"><i class="fab fa-youtube"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer  -->
+
+	<div class="white-div">
+		<p class="text-center font-bold fw-bold text-dark">VISILARS.COM</p>
+	</div>
+
+
+
+			</div>
+		</div>
+
+
+		<!-- End Latest Product Module -->
+	</section>
+
+
+</body>
+</html>

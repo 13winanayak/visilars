@@ -1,0 +1,295 @@
+@charset "ISO-8859-1";
+
+.card-sh {
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cat-div {
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.error {
+	color: red;
+}
+
+body {
+  background-color: rgb(237, 235, 228);
+}
+
+/* Additional CSS to style the card and text */
+/* Add shadow and hover effect */
+
+.card01 {
+            width: 100%; /* Full width within the column */
+            height: 320px; /* Increased card height */
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card01:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card01-img-container {
+            height: 70%; /* Image takes up 70% of the card height */
+            overflow: hidden;
+        }
+
+        .card01-img {
+            width: 100%; /* Image fills the container */
+            height: 100%;
+            object-fit: cover; /* Ensures the image is scaled proportionally and cropped if necessary */
+        }
+
+        .card01-body {
+            height: 30%; /* Body takes up 30% of the card height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card01-body a {
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .card01-body a:hover {
+            text-decoration: underline;
+        }
+
+
+
+/* General Footer Styling */
+.footer {
+    padding: 40px 0;
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.text-light {
+    color: #ccc;
+}
+
+.bg-dark {
+    background-color: #333;
+}
+
+/* Get in Touch Section */
+.flag-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+}
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Header Section */
+.header02-section {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header02-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.know-more-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.know-more-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Statistics Section */
+.statistics-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333333;
+    padding: 40px 20px;
+}
+
+.stat-card {
+    background-color: #eaeaea;
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0 0;
+}
+
+
+.bg-grey {
+    background-color: #d3d3d3; /* Replace with your desired grey shade */
+}
+
+/* Style for the dropdown menu */
+.stylish-dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+	opacity: 0;
+	transform: translateY(-20px);
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+
+.nav-item.dropdown:hover .stylish-dropdown {
+	display: block;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Dropdown item hover effect */
+.stylish-dropdown .dropdown-item {
+	padding: 10px 15px;
+	color: #333;
+	font-weight: 500;
+}
+
+.stylish-dropdown .dropdown-item:hover {
+	background-color: #f1f1f1;
+	color: #000;
+}
+
+/* General card styling */
+.category-card02 {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	background-color: #f8f9fa; /* Light grey color */
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.category-card02:hover {
+	transform: translateY(-10px); /* Lifts the card slightly */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow */
+	background-color: #e9ecef; /* Slightly darker grey on hover */
+}
+
+/* Centered link styling */
+.category-card02 .card-body {
+	height: 180px;
+	background-color: #dfdfe6; /* Consistent light grey */
+	border-radius: 8px;
+}
+
+/* Link hover effect */
+.category-card02 a:hover {
+	color: #007bff; /* Optional: Changes text color to a blue shade */
+	text-decoration: underline;
+}
+
+.map-section {
+    position: relative;
+    margin-bottom: 20px;
+     margin-bottom: 20px;
+    text-align: center;
+
+}
+
+/* Map Image Styling */
+.map-image {
+    width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 470px; /* Adjust the height as needed */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+    border-radius: 8px; /* Optional: Rounds the corners */
+    object-fit: cover; /* Ensures the image fills the defined height nicely */
+}
+
+

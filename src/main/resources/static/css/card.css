@@ -1,0 +1,41 @@
+
+.card {
+            width: 100%; /* Full width within the column */
+            height: 320px; /* Increased card height */
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-container {
+            height: 70%; /* Image takes up 70% of the card height */
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 100%; /* Image fills the container */
+            height: 100%;
+            object-fit: cover; /* Ensures the image is scaled proportionally and cropped if necessary */
+        }
+
+        .card-body {
+            height: 30%; /* Body takes up 30% of the card height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-body a {
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .card-body a:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,154 @@
+/* Resetting margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting a global font family */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures full viewport height */
+    padding: 20px; /* Padding for better spacing on smaller screens */
+}
+
+/* Contact section styling */
+.contact-us {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-us:hover {
+    transform: translateY(-10px); /* Lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: #333;
+    animation: colorMove 3s infinite;
+    letter-spacing: 1px; /* Adds spacing for a cleaner look */
+}
+
+.header .highlight {
+    color: #ff6347; /* Initial color for 'US' */
+}
+
+@keyframes colorMove {
+    0% {
+        color: #ff6347; /* Tomato color */
+    }
+    50% {
+        color: #4caf50; /* Green color */
+    }
+    100% {
+        color: #1e90ff; /* Dodger blue */
+    }
+}
+
+/* Content section styling */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Image section styling */
+.image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Adds depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Details section styling */
+.details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.details p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.office p,
+.careers p {
+    line-height: 1.8;
+}
+
+/* Button Styling */
+.details .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #1e90ff; /* Dodger blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.details .btn:hover {
+    background-color: #4caf50; /* Green */
+    transform: scale(1.05);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+
+    .details {
+        text-align: center;
+    }
+
+    .details .btn {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
